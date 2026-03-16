@@ -9,10 +9,15 @@ public class ConnectionClass {
     // Constructor to establish connection
     ConnectionClass() {
         try {
-         
+            // Load the JDBC driver
             Class.forName("com.mysql.cj.jdbc.Driver");
+
             // Establishing connection to MySQL
             con = DriverManager.getConnection("jdbc:mysql://localhost:3307/Employee_Management", "root", "Pooja@123");
+
+            // Initialize the Statement object
+            stm = con.createStatement();
+
             System.out.println("Connection established successfully!");
         } catch (Exception e) {
             e.printStackTrace();
@@ -21,6 +26,6 @@ public class ConnectionClass {
 
     // Main method to run the class
     public static void main(String[] args) {
-        new ConnectionClass();  //  instance of ConnectionClass
+        new ConnectionClass();  // instance of ConnectionClass
     }
 }
