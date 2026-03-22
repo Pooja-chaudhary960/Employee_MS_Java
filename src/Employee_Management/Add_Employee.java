@@ -97,7 +97,7 @@ public class Add_Employee extends JFrame {
             int rowsAffected = pst.executeUpdate();
             if (rowsAffected > 0) {
                 JOptionPane.showMessageDialog(this, "Employee added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
-                clearFields(); ]
+                clearFields(); 
                 dispose();
             } else {
                 JOptionPane.showMessageDialog(this, "Error adding employee.", "Error", JOptionPane.ERROR_MESSAGE);
